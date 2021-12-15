@@ -1,10 +1,11 @@
 {
-	"name": "typescript-starter-template",
+	"name": "efficient-testing",
 	"version": "1.0.0",
 	"description": "",
 	"scripts": {
+		"gitCommitFileDiff": "node npm-scripts/git-commit-file-diff",
+		"clean": "rm -rf ./repos/*/",
 		"build": "rm -rf dist && npx tsc",
-		"start": "node ./npm-scripts/start",
 		"test": "mocha --config .mocharc.json tests/*.test.ts tests/**/*.test.ts",
 		"postinstall": "yarn build"
 	},
@@ -15,6 +16,7 @@
 	"devDependencies": {
 		"@types/chai": "^4.2.21",
 		"@types/mocha": "^9.0.0",
+		"@types/shelljs": "^0.8.9",
 		"@typescript-eslint/eslint-plugin": "^4.28.3",
 		"@typescript-eslint/parser": "^4.28.3",
 		"chai": "^4.3.4",
@@ -30,6 +32,8 @@
 	"dependencies": {
 		"dotenv": "^10.0.0",
 		"module-alias": "^2.2.2",
-		"moment": "^2.29.1"
+		"moment": "^2.29.1",
+		"shelljs": "^0.8.4",
+		"simple-git": "^2.48.0"
 	}
 }
